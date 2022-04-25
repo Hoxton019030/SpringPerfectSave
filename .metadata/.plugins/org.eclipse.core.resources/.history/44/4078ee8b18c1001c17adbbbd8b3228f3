@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+<context:component-scan base-package="com.jerrymvc.springdemo" />
+<aop:aspectj-autoproxy />
+
+
+<!--     Teacher teacher1 =  new MathTeacher(); -->
+      <bean id="teacher1" class="tw.ispan.springdemo.model.EnglishTeacher" />
+      
+<!--       String string0 = new String("Test Information"); -->
+      <bean id="string0" name="string1, string2" class="java.lang.String" >
+         <constructor-arg value="Test Information"></constructor-arg>
+      </bean>
+      
+      <bean id="loginDao" class="tw.ispan.springdemo.model.LoginDao"></bean>
+      
+<!--       Constructor Injection -->
+      <bean id="loginService" class="tw.ispan.springdemo.model.LoginService">
+          <constructor-arg ref="loginDao"></constructor-arg>
+      </bean>
+      
+<!--       Setter Injection -->
+      <bean id="loginService2" class="tw.ispan.springdemo.model.LoginService" >
+         <property name="loginDao" ref="loginDao"></property>
+      </bean>
+      
+      <bean id="car1" class="tw.ispan.springdemo.model.Car">
+        <constructor-arg index="0" value="1001" />
+        <constructor-arg index="1" value="model 3" />
+        <constructor-arg index="2" value="Tesla" />
+      </bean>
+      
+<!--      Date date1 = new Date(); -->
+      <bean id="date1" class="java.util.Date" />
+      
+      <bean id="car2" class="tw.ispan.springdemo.model.Car">
+        <constructor-arg ref="date1"></constructor-arg>
+      </bean>
+      
+<!--       p 命名空間的作法 -->
+      <bean id="car3" class="tw.ispan.springdemo.model.Car"  
+      p:carId="1002"
+      p:carName="119"
+      p:brand="福斯" 
+      p:releaseDate-ref="date1"
+       />
+       
+      <bean id="javaBook" class="tw.ispan.springdemo.model.BookBeanStaticFactory" factory-method="getBook">
+         <constructor-arg value="1" />
+      </bean>
+      
+      <bean id="mathBook" class="tw.ispan.springdemo.model.BookBeanStaticFactory" factory-method="getBook">
+         <constructor-arg value="2" />
+      </bean>
+      
+      <bean id="bookBeanFactory" class="tw.ispan.springdemo.model.BookBeanFactory">
+        <property name="bookmap">
+           <map>
+             <entry key="3">
+               <bean class="tw.ispan.springdemo.model.Book">
+                  <property name="bookId" value="3"></property>
+                  <property name="bookName" value="掌握市場週期"></property>
+               </bean>
+             </entry>
+             <entry key="4">
+               <bean class="tw.ispan.springdemo.model.Book">
+                  <property name="bookId" value="4"></property>
+                  <property name="bookName" value="TCP IP 說明書"></property>
+               </bean>
+             </entry>
+           </map>
+        </property>
+      </bean>
+      
+      
+      <bean id="marketBook" factory-bean="bookBeanFactory" factory-method="getBook">
+          <constructor-arg value="3"></constructor-arg>
+      </bean>
+      
+      <bean id="tcpBook" factory-bean="bookBeanFactory" factory-method="getBook">
+          <constructor-arg value="4"></constructor-arg>
+      </bean>
+      
+      <!-- Demo 10 XML 寫法 -->
+<!--       <bean id="props" class="org.springframework.beans.factory.config.PropertiesFactoryBean"> -->
+<!--          <property name="location"> -->
+<!--             <value>classpath:light.properties</value> -->
+<!--          </property> -->
+<!--       </bean> -->
+      
+
+</beans>

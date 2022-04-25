@@ -1,0 +1,5 @@
+1650852817059	Extract local variable 'internalResourceViewResolver'
+1650852911936	Rename local variable 'ViewResolver'
+1650855694148	Move folder
+1650858885502	Extract local variable 'session'
+1650858894330	Extract local variable 'beginTransaction'

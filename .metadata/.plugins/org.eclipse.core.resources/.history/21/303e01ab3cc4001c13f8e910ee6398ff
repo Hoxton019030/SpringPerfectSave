@@ -1,0 +1,5 @@
+package com.jerrymvc.springdemo.config;
+
+public class WebAppConfig {
+
+}
