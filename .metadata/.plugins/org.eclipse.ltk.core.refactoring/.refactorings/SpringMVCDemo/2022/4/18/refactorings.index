@@ -9,3 +9,5 @@
 1650869771826	Extract local variable 'qeuey'
 1650869814083	Extract local variable 'resultList'
 1650870003453	Extract local variable 'allEmployee'
+1650871298476	Rename resource 'empcss.css'
+1650871671692	Rename resource 'lsitEmployee.jsp'
