@@ -47,6 +47,7 @@ public class EmployeeController {
 	@GetMapping("/deleteEmp")
 	public String deleteEmployee(@RequestParam("id") Integer id) {
 		empService.deleteEmployee(id);
+		// 去找controller的url->servlet中的redirectXXX
 		return "redirect:list";
 	}
 
