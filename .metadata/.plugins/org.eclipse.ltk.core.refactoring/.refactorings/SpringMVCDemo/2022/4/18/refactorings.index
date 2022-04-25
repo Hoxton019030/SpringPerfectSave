@@ -11,3 +11,6 @@
 1650870003453	Extract local variable 'allEmployee'
 1650871298476	Rename resource 'empcss.css'
 1650871671692	Rename resource 'lsitEmployee.jsp'
+1650872763453	Extract local variable 'session'
+1650872834542	Extract local variable 'tempEmp'
+1650873837298	Extract local variable 'session'

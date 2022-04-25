@@ -29,4 +29,23 @@ public class EmployeeDao {
 		return resultList;
 	}
 
+	public boolean deleteEmp(Integer id) {
+		Session session = factory.getCurrentSession();
+		Employee tempEmp = session.get(Employee.class, id);
+
+		if (tempEmp != null) {
+			session.delete(tempEmp);
+			return true;
+		}
+		return false;
+
+	}
+
+	public Employee updateEmp(Employee emp) {
+		Session session = factory.getCurrentSession();
+		session.saveOrUpdate(emp);
+		return emp;
+
+	}
+
 }

@@ -27,7 +27,9 @@
 				<th>${oneEmployee.name}</th>
 				<th>${oneEmployee.email}</th>
 				<th>${oneEmployee.jobAge}</th>
-				<th><button>修改</button> </th>
+				<td><a href="${contextRoot}/employee/deleteEmp?id=${oneEmployee.id}">刪除</a></td>
+				<td><a href="#">編輯</a></td>
+				
 			</tr>
 		</c:forEach>
 	</table>

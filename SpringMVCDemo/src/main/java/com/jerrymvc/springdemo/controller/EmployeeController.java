@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.jerrymvc.springdemo.model.Employee;
 import com.jerrymvc.springdemo.service.EmployeeService;
@@ -41,7 +42,13 @@ public class EmployeeController {
 
 		model.addAttribute("employeeList", allEmployee);
 		return "employee/listEmployee";
+	}
 
+	@GetMapping("/deleteEmp")
+	public String deleteEmployee(@RequestParam("id") Integer id) {
+		empService.deleteEmployee(id);
+		// 去找controller的url->servlet中的redirectXXX
+		return "redirect:list";
 	}
 
 }

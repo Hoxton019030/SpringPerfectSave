@@ -23,4 +23,9 @@ public class EmployeeService {
 	public List<Employee> getAllEmployee() {
 		return empDao.listEmp();
 	}
+	
+	public boolean deleteEmployee(Integer id) {
+		return empDao.deleteEmp(id);
+		
+	}
 }
