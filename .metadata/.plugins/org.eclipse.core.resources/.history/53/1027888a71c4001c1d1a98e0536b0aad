@@ -28,8 +28,4 @@ public class EmployeeService {
 		return empDao.deleteEmp(id);
 		
 	}
-	
-	public Employee updateEmployee(Employee emp) {
-		return empDao.updateEmp(emp);
-	}
 }
