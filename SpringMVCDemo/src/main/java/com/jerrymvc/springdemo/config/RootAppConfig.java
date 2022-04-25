@@ -36,8 +36,8 @@ public class RootAppConfig {
 	public HikariDataSource datasource() {
 		HikariConfig config = new HikariConfig();
 		config.setJdbcUrl("jdbc:sqlserver://localhost:1433;databaseName=SpringMvcDB");
-		config.setUsername("sa");
-		config.setPassword("12345");
+		config.setUsername("Hoxton");
+		config.setPassword("orz93098");
 		config.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		config.setMaximumPoolSize(5);
 		config.setAutoCommit(false);

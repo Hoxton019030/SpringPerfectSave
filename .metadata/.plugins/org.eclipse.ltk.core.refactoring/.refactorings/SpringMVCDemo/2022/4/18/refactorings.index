@@ -3,3 +3,9 @@
 1650855694148	Move folder
 1650858885502	Extract local variable 'session'
 1650858894330	Extract local variable 'beginTransaction'
+1650865141818	Move 3 resources to 'WEB-INF'
+1650865247760	Delete element
+1650869717201	Extract local variable 'currentSession'
+1650869771826	Extract local variable 'qeuey'
+1650869814083	Extract local variable 'resultList'
+1650870003453	Extract local variable 'allEmployee'
