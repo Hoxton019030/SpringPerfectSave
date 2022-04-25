@@ -14,8 +14,6 @@
 <a href="showCarForm">到 Car 表單頁面</a>
 <br />
 <a href="employee/add">新增員工頁面</a>
-<br />
-<a href="employee/lsit">查看所有員工 </a>
 
 </body>
 </html>
