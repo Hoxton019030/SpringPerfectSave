@@ -15,7 +15,13 @@
 <br />
 <a href="employee/add">新增員工頁面</a>
 <br />
-<a href="employee/list">查看所有員工 </a>
+<a href="employee/list">查看所有員工</a>
+<br />
+<a href="memberlogin">Member 登入</a>
+<br />
+<a href="newPhoto">新增照片頁面</a>
+<br />
+<a href="listGoodPhoto">查看所有照片</a>
 
 </body>
 </html>

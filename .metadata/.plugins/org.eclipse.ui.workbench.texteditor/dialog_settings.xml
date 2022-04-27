@@ -8,10 +8,12 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="UTF-7"/>
 			<item value="BIG5"/>
 		</list>
 		<list key="replacehistory">
 			<item value="UTF-8"/>
+			<item value="UTF-7"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

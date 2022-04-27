@@ -15,3 +15,23 @@
 1650872834542	Extract local variable 'tempEmp'
 1650873837298	Extract local variable 'session'
 1650874221413	Delete element
+1650937057859	Extract local variable 'session'
+1650937106997	Extract local variable 'temEmp'
+1650939096691	Extract local variable 'tempEmp'
+1650939977972	Delete element
+1650943615409	Move 'login.jsp' to 'view'
+1650943696861	Move 'loginOK.jsp' to 'view'
+1650945190453	Copy compilation units
+1650948587335	Copy compilation units
+1650960939112	Extract local variable 'resolver'
+1651024389359	Extract local variable 'goodPhoto'
+1651025676451	Extract local variable 'bytes'
+1651026076795	Extract local variable 'session'
+1651026111243	Extract local variable 'query'
+1651026183116	Extract local variable 'session'
+1651026201161	Extract local variable 'gp'
+1651028050300	Extract local variable 'list'
+1651028580170	Extract local variable 'goodphoto1'
+1651028618622	Extract local variable 'photoByte'
+1651028635461	Extract local variable 'photoName'
+1651028672475	Extract local variable 'header'
